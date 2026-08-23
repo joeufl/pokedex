@@ -13,8 +13,6 @@ def fetch_data():
 data_file = os.path.join(os.getcwd(), "static", "shinypokemon.csv")
 df = fetch_data()
 
-st.dataframe(df)
-
 static = 'shiny&!traded&'
 display = df['id'].tolist()
 new = '' 
@@ -26,7 +24,5 @@ for i in display:
 
 concat = static +  new
 clean = concat[:-1]
-
-st.text(clean)
 
 st.code(clean, language=None)
