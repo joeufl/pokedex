@@ -25,4 +25,7 @@ for i in display:
 concat = static +  new
 clean = concat[:-1]
 
+st.write('Shiny Pokemon')
+st.subtitle('Tap/Click')
+
 st.code(clean, language=None)
