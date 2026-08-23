@@ -1,305 +1,305 @@
-id	name
-161	sentret
-162	furret
-185	sudowoodo
-200	misdreavus
-218	slugma
-219	magcargo
-223	remoraid
-224	octillery
-231	phanpy
-232	donphan
-238	smoochum
-239	elekid
-292	shedinja
-298	azurill
-301	delcatty
-316	gulpin
-317	swalot
-338	solrock
-341	corphish
-342	crawdaunt
-347	anorith
-348	armaldo
-352	kecleon
-360	wynaut
-369	relicanth
-414	mothim
-416	vespiquen
-417	pachirisu
-418	buizel
-419	floatzel
-429	mismagius
-431	glameow
-432	purugly
-433	chingling
-439	mime jr.
-441	chatot
-449	hippopotas
-450	hippowdon
-456	finneon
-457	lumineon
-458	mantyke
-476	probopass
-480	uxie
-481	mesprit
-492	shaymin
-493	arceus
-494	victini
-506	lillipup
-507	herdier
-508	stoutland
-511	pansage
-512	simisage
-513	pansear
-514	simisear
-556	maractus
-561	sigilyph
-565	carracosta
-575	gothorita
-576	gothitelle
-613	cubchoo
-614	beartic
-619	mienfoo
-620	mienshao
-626	bouffalant
-636	larvesta
-637	volcarona
-641	tornadus
-666	vivillon
-672	skiddo
-673	gogoat
-679	honedge
-680	doublade
-681	aegislash
-685	slurpuff
-692	clauncher
-693	clawitzer
-701	hawlucha
-707	klefki
-718	zygarde
-719	diancie
-720	hoopa
-721	volcanion
-739	crabrawler
-740	crabominable
-745	lycanroc
-746	wishiwashi
-757	salandit
-758	salazzle
-764	comfey
-769	sandygast
-770	palossand
-771	pyukumuku
-772	type: null
-773	silvally
-774	minior
-775	komala
-778	mimikyu
-780	drampa
-785	tapu koko
-786	tapu lele
-787	tapu bulu
-789	cosmog
-790	cosmoem
-792	lunala
-795	pheromosa
-796	xurkitree
-797	celesteela
-801	magearna
-802	marshadow
-803	poipole
-804	naganadel
-805	stakataka
-806	blacephalon
-807	zeraora
-824	blipbug
-825	dottler
-826	orbeetle
-829	gossifleur
-830	eldegoss
-833	chewtle
-834	drednaw
-835	yamper
-836	boltund
-837	rolycoly
-838	carkol
-839	coalossal
-840	applin
-841	flapple
-842	appletun
-843	silicobra
-844	sandaconda
-845	cramorant
-846	arrokuda
-847	barraskewda
-848	toxel
-849	toxtricity
-850	sizzlipede
-851	centiskorch
-852	clobbopus
-853	grapploct
-854	sinistea
-855	polteageist
-856	hatenna
-857	hattrem
-858	hatterene
-859	impidimp
-860	morgrem
-865	sirfetch'd
-867	runerigus
-868	milcery
-869	alcremie
-871	pincurchin
-872	snom
-873	frosmoth
-874	stonjourner
-875	eiscue
-876	indeedee
-877	morpeko
-878	cufant
-879	copperajah
-880	dracozolt
-881	arctozolt
-882	dracovish
-883	arctovish
-884	duraludon
-885	dreepy
-886	drakloak
-887	dragapult
-890	eternatus
-891	kubfu
-892	urshifu
-893	zarude
-894	regieleki
-895	regidrago
-896	glastrier
-897	spectrier
-898	calyrex
-899	wyrdeer
-900	kleavor
-901	ursaluna
-902	basculegion
-903	sneasler
-904	overqwil
-905	enamorus
-906	sprigatito
-907	floragato
-908	meowscarada
-909	fuecoco
-910	crocalor
-911	skeledirge
-912	quaxly
-913	quaxwell
-914	quaquaval
-915	lechonk
-916	oinkologne
-917	tarountula
-918	spidops
-919	nymble
-920	lokix
-921	pawmi
-922	pawmo
-923	pawmot
-924	tandemaus
-925	maushold
-926	fidough
-927	dachsbun
-928	smoliv
-929	dolliv
-930	arboliva
-931	squawkabilly
-932	nacli
-933	naclstack
-934	garganacl
-935	charcadet
-936	armarouge
-937	ceruledge
-938	tadbulb
-939	bellibolt
-940	wattrel
-941	kilowattrel
-942	maschiff
-943	mabosstiff
-944	shroodle
-945	grafaiai
-946	bramblin
-947	brambleghast
-948	toedscool
-949	toedscruel
-950	klawf
-951	capsakid
-952	scovillain
-953	rellor
-954	rabsca
-955	flittle
-956	espathra
-957	tinkatink
-958	tinkatuff
-959	tinkaton
-960	wiglett
-961	wugtrio
-962	bombirdier
-963	finizen
-964	palafin
-965	varoom
-966	revavroom
-967	cyclizar
-968	orthworm
-969	glimmet
-970	glimmora
-971	greavard
-972	houndstone
-973	flamigo
-974	cetoddle
-975	cetitan
-976	veluza
-977	dondozo
-978	tatsugiri
-979	annihilape
-980	clodsire
-981	farigiraf
-982	dudunsparce
-983	kingambit
-984	great tusk
-985	scream tail
-986	brute bonnet
-987	flutter mane
-988	slither wing
-989	sandy shocks
-990	iron treads
-991	iron bundle
-992	iron hands
-993	iron jugulis
-994	iron moth
-995	iron thorns
-996	frigibax
-997	arctibax
-998	baxcalibur
-999	gimmighoul
-1000	gholdengo
-1001	wo-chien
-1002	chien-pao
-1003	ting-lu
-1004	chi-yu
-1005	roaring moon
-1006	iron valiant
-1007	koraidon
-1008	miraidon
-1009	walking wake
-1010	iron leaves
-1011	dipplin
-1012	poltchageist
-1013	sinistcha
-1014	okidogi
-1015	munkidori
-1016	fezandipiti
-1017	ogerpon
-1018	archaludon
-1019	hydrapple
-1020	gouging fire
-1021	raging bolt
-1022	iron boulder
-1023	iron crown
-1024	terapagos
-1025	pecharunt
+﻿id,name
+161,sentret
+162,furret
+185,sudowoodo
+200,misdreavus
+218,slugma
+219,magcargo
+223,remoraid
+224,octillery
+231,phanpy
+232,donphan
+238,smoochum
+239,elekid
+292,shedinja
+298,azurill
+301,delcatty
+316,gulpin
+317,swalot
+338,solrock
+341,corphish
+342,crawdaunt
+347,anorith
+348,armaldo
+352,kecleon
+360,wynaut
+369,relicanth
+414,mothim
+416,vespiquen
+417,pachirisu
+418,buizel
+419,floatzel
+429,mismagius
+431,glameow
+432,purugly
+433,chingling
+439,mime jr.
+441,chatot
+449,hippopotas
+450,hippowdon
+456,finneon
+457,lumineon
+458,mantyke
+476,probopass
+480,uxie
+481,mesprit
+492,shaymin
+493,arceus
+494,victini
+506,lillipup
+507,herdier
+508,stoutland
+511,pansage
+512,simisage
+513,pansear
+514,simisear
+556,maractus
+561,sigilyph
+565,carracosta
+575,gothorita
+576,gothitelle
+613,cubchoo
+614,beartic
+619,mienfoo
+620,mienshao
+626,bouffalant
+636,larvesta
+637,volcarona
+641,tornadus
+666,vivillon
+672,skiddo
+673,gogoat
+679,honedge
+680,doublade
+681,aegislash
+685,slurpuff
+692,clauncher
+693,clawitzer
+701,hawlucha
+707,klefki
+718,zygarde
+719,diancie
+720,hoopa
+721,volcanion
+739,crabrawler
+740,crabominable
+745,lycanroc
+746,wishiwashi
+757,salandit
+758,salazzle
+764,comfey
+769,sandygast
+770,palossand
+771,pyukumuku
+772,type: null
+773,silvally
+774,minior
+775,komala
+778,mimikyu
+780,drampa
+785,tapu koko
+786,tapu lele
+787,tapu bulu
+789,cosmog
+790,cosmoem
+792,lunala
+795,pheromosa
+796,xurkitree
+797,celesteela
+801,magearna
+802,marshadow
+803,poipole
+804,naganadel
+805,stakataka
+806,blacephalon
+807,zeraora
+824,blipbug
+825,dottler
+826,orbeetle
+829,gossifleur
+830,eldegoss
+833,chewtle
+834,drednaw
+835,yamper
+836,boltund
+837,rolycoly
+838,carkol
+839,coalossal
+840,applin
+841,flapple
+842,appletun
+843,silicobra
+844,sandaconda
+845,cramorant
+846,arrokuda
+847,barraskewda
+848,toxel
+849,toxtricity
+850,sizzlipede
+851,centiskorch
+852,clobbopus
+853,grapploct
+854,sinistea
+855,polteageist
+856,hatenna
+857,hattrem
+858,hatterene
+859,impidimp
+860,morgrem
+865,sirfetch'd
+867,runerigus
+868,milcery
+869,alcremie
+871,pincurchin
+872,snom
+873,frosmoth
+874,stonjourner
+875,eiscue
+876,indeedee
+877,morpeko
+878,cufant
+879,copperajah
+880,dracozolt
+881,arctozolt
+882,dracovish
+883,arctovish
+884,duraludon
+885,dreepy
+886,drakloak
+887,dragapult
+890,eternatus
+891,kubfu
+892,urshifu
+893,zarude
+894,regieleki
+895,regidrago
+896,glastrier
+897,spectrier
+898,calyrex
+899,wyrdeer
+900,kleavor
+901,ursaluna
+902,basculegion
+903,sneasler
+904,overqwil
+905,enamorus
+906,sprigatito
+907,floragato
+908,meowscarada
+909,fuecoco
+910,crocalor
+911,skeledirge
+912,quaxly
+913,quaxwell
+914,quaquaval
+915,lechonk
+916,oinkologne
+917,tarountula
+918,spidops
+919,nymble
+920,lokix
+921,pawmi
+922,pawmo
+923,pawmot
+924,tandemaus
+925,maushold
+926,fidough
+927,dachsbun
+928,smoliv
+929,dolliv
+930,arboliva
+931,squawkabilly
+932,nacli
+933,naclstack
+934,garganacl
+935,charcadet
+936,armarouge
+937,ceruledge
+938,tadbulb
+939,bellibolt
+940,wattrel
+941,kilowattrel
+942,maschiff
+943,mabosstiff
+944,shroodle
+945,grafaiai
+946,bramblin
+947,brambleghast
+948,toedscool
+949,toedscruel
+950,klawf
+951,capsakid
+952,scovillain
+953,rellor
+954,rabsca
+955,flittle
+956,espathra
+957,tinkatink
+958,tinkatuff
+959,tinkaton
+960,wiglett
+961,wugtrio
+962,bombirdier
+963,finizen
+964,palafin
+965,varoom
+966,revavroom
+967,cyclizar
+968,orthworm
+969,glimmet
+970,glimmora
+971,greavard
+972,houndstone
+973,flamigo
+974,cetoddle
+975,cetitan
+976,veluza
+977,dondozo
+978,tatsugiri
+979,annihilape
+980,clodsire
+981,farigiraf
+982,dudunsparce
+983,kingambit
+984,great tusk
+985,scream tail
+986,brute bonnet
+987,flutter mane
+988,slither wing
+989,sandy shocks
+990,iron treads
+991,iron bundle
+992,iron hands
+993,iron jugulis
+994,iron moth
+995,iron thorns
+996,frigibax
+997,arctibax
+998,baxcalibur
+999,gimmighoul
+1000,gholdengo
+1001,wo-chien
+1002,chien-pao
+1003,ting-lu
+1004,chi-yu
+1005,roaring moon
+1006,iron valiant
+1007,koraidon
+1008,miraidon
+1009,walking wake
+1010,iron leaves
+1011,dipplin
+1012,poltchageist
+1013,sinistcha
+1014,okidogi
+1015,munkidori
+1016,fezandipiti
+1017,ogerpon
+1018,archaludon
+1019,hydrapple
+1020,gouging fire
+1021,raging bolt
+1022,iron boulder
+1023,iron crown
+1024,terapagos
+1025,pecharunt
