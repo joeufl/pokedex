@@ -26,6 +26,5 @@ concat = static +  new
 clean = concat[:-1]
 
 st.write('Shiny Pokemon')
-st.subtitle('Tap/Click')
-
+st.subheader('Tap/Click a section below anc copy')
 st.code(clean, language=None)
