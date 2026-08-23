@@ -25,6 +25,12 @@ for i in display:
 concat = static +  new
 clean = concat[:-1]
 
+st.subheader('Tap/Hover over a section below and copy')
+
+
 st.write('Shiny Pokemon')
-st.subheader('Tap/Click a section below anc copy')
+st.code(clean, language=None)
+
+st.write('Lucky Pokemon (placeholder)')
+
 st.code(clean, language=None)
