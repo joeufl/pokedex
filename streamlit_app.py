@@ -37,7 +37,19 @@ lucky_base = '!traded&'
 lucky_concat = lucky_base + lucky_str
 clean_lucky = lucky_concat[:-1]
 
-#print
+# Jillian
+shinies_j = df.loc[df['JILLIAN'] != 'Y', ['ID']]
+shiny_str_j = ''
+shiny_list_j = shinies_j['ID'].to_list()
+for i_j in shiny_list_j: 
+    s_j = str(i_j)
+    shiny_str_j += s_j
+    shiny_str_j += ','
+shiny_base_j = 'shiny&!traded&'
+shiny_concat_j = shiny_base_j + shiny_str_j
+clean_shinies_j = shiny_concat_j[:-1]
+
+# Print to Streamlit
 st.subheader('Tap/Hover over a section below and copy')
 
 st.write('Shiny Pokemon')
@@ -45,3 +57,6 @@ st.code(clean_shinies, language=None)
 
 st.write('Lucky Pokemon')
 st.code(clean_lucky, language=None)
+
+st.write('Jillian Shiny Living Pokemon (Kanto)')
+st.code(clean_shinies_j, language=None)
