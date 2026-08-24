@@ -21,7 +21,7 @@ for i in shiny_list:
     s = str(i)
     shiny_str += s
     shiny_str += ','
-shiny_base = 'shiny&!traded&'
+shiny_base = 'shiny&!traded&!shadow&!4*&'
 shiny_concat = shiny_base + shiny_str
 clean_shinies = shiny_concat[:-1]
 
@@ -33,7 +33,7 @@ for i in lucky_list:
     s = str(i)
     lucky_str += s
     lucky_str += ','
-lucky_base = '!traded&'
+lucky_base = '!traded&!shadow&!4*&'
 lucky_concat = lucky_base + lucky_str
 clean_lucky = lucky_concat[:-1]
 
@@ -45,7 +45,7 @@ for i_j in shiny_list_j:
     s_j = str(i_j)
     shiny_str_j += s_j
     shiny_str_j += ','
-shiny_base_j = 'shiny&!traded&'
+shiny_base_j = 'shiny&!traded&!4*&'
 shiny_concat_j = shiny_base_j + shiny_str_j
 clean_shinies_j = shiny_concat_j[:-1]
 
