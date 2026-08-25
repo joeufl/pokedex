@@ -1,23 +1,51 @@
 import os
+import io
 from datetime import date
+import requests
 import streamlit as st
 import pandas as pd
 
 st.title("Pokedex Tracker")
 
-@st.cache_data(ttl=60)
-def fetch_data():
-    df = pd.read_csv(data_file)
-    return df
+# Google Sheet IDs are 44 chars; uploaded-file IDs are ~33. Both are handled below.
+FILE_ID = "1GkeodImJ24ulJpEPU7DIyr2GsUslpcR94ddZTeujSI0"
+GID = None  # Sheets only: pick a tab via the #gid= in its URL, or None for the first tab
 
-data_file = os.path.join(os.getcwd(), "static", "POKEMON_DATA.csv")
-df = fetch_data()
+## TODO 
+## build import/upload for URL/file
 
-base_str = '!favorite&!traded&!shadow&!4*&'
+@st.cache_data(ttl=600)
+def build_url(file_id, gid):
+    if len(file_id) > 40:
+        # A Sheet: uc?export=download returns an HTML page, not CSV.
+        url = f"https://docs.google.com/spreadsheets/d/{file_id}/export?format=csv"
+        return f"{url}&gid={gid}" if gid is not None else url
+    # An uploaded file: confirm=t skips the "can't scan for viruses" interstitial.
+    return f"https://drive.google.com/uc?id={file_id}&export=download&confirm=t"
+
+def load_public_data(file_id, gid):
+    response = requests.get(build_url(file_id, gid), timeout=30)
+    response.raise_for_status()
+
+    # A login or interstitial page comes back as HTML with a 200, so check the body.
+    if response.content.lstrip()[:1] == b"<":
+        raise ValueError(
+            "Got HTML instead of CSV. Check that the ID is right and that the file "
+            "is shared as 'Anyone with the link'."
+        )
+    return pd.read_csv(io.StringIO(response.text))
+
+try:
+    df = load_public_data(FILE_ID, GID)
+    # st.dataframe(df)
+except Exception as e:
+    st.error(f"Error loading data: {e}")
+
+base_str = '!favorite&!traded&!shadow&!4*&!mythical&'
 shiny_base = 'shiny&'
 
 # Shinies
-shinies = df.loc[df['SHINY'] != 'Y', ['ID']]
+shinies = df.loc[df['SHINY'] == 'Y', ['ID']]
 shiny_str = ''
 shiny_list = shinies['ID'].to_list()
 for i in shiny_list: 
@@ -28,7 +56,7 @@ shiny_concat = base_str + shiny_base + shiny_str
 clean_shinies = shiny_concat[:-1]
 
 # Lucky
-lucky = df.loc[df['LUCKY'] != 'Y', ['ID']]
+lucky = df.loc[df['LUCKY'] == 'Y', ['ID']]
 lucky_str = ''
 lucky_list = lucky['ID'].to_list()
 for i in lucky_list: 
@@ -39,7 +67,7 @@ lucky_concat = base_str + lucky_str
 clean_lucky = lucky_concat[:-1]
 
 # Joe Needs for Shiny and Lucky
-shlucky = df.loc[(df['SHINY'] != 'Y') & (df['LUCKY'] != 'Y'), ['ID']]
+shlucky = df.loc[(df['SHINY'] == 'Y') & (df['LUCKY'] == 'Y'), ['ID']]
 shlucky_str = ''
 shlucky_list = shlucky['ID'].to_list()
 for i in shlucky_list: 
@@ -50,7 +78,7 @@ shlucky_concat = base_str + shiny_base + shlucky_str
 clean_shlucky = shlucky_concat[:-1]
 
 # Jillian
-shinies_j = df.loc[df['JILLIAN'] != 'Y', ['ID']]
+shinies_j = df.loc[df['JILLIAN'] == 'Y', ['ID']]
 shiny_str_j = ''
 shiny_list_j = shinies_j['ID'].to_list()
 for i_j in shiny_list_j: 
@@ -61,7 +89,7 @@ shiny_concat_j = base_str + shiny_base + shiny_str_j
 clean_shinies_j = shiny_concat_j[:-1]
 
 # Print to Streamlit
-st.subheader('Tap/Hover over a section below and copy')
+st.subheader('Tap/Hover over a section below and copy by clicking the squares')
 
 st.write('Shiny & Lucky Pokemon Joe Needs')
 st.code(clean_shlucky, language=None)
@@ -69,8 +97,24 @@ st.code(clean_shlucky, language=None)
 st.write('Shiny Pokemon Joe Needs')
 st.code(clean_shinies, language=None)
 
-st.write('Lucky Pokemon Joe Needs')
-st.code(clean_lucky, language=None)
+with st.sidebar:
+    # add_radio = st.radio(
+    #     "Choose a shipping method",
+    #     ("Standard (5-15 days)", "Express (2-5 days)")
+    # )
 
-st.write('Jillian Shiny Living Pokemon (Kanto)')
-st.code(clean_shinies_j, language=None)
+    st.write('Download a copy of the Pokedex')
+    with open("base/pokemon.csv", "rb") as file:
+        st.download_button(
+            label="Download File",
+            data=file,
+            file_name="pokedex.csv",
+        )
+
+    st.write('Lucky Pokemon Joe Needs')
+    st.code(clean_lucky, language=None)
+
+    st.write('Jillian Shiny Living Pokemon (Kanto)')
+    st.code(clean_shinies_j, language=None)
+
+    
