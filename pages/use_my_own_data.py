@@ -10,7 +10,6 @@ import pandas as pd
 FILE_ID = st.text_input('Enter your Google Drive ID')
 GID = None  # Sheets only: pick a tab via the #gid= in its URL, or None for the first tab
 
-
 try:
     @st.cache_data(ttl=600)
     def build_url(file_id, gid):
@@ -20,7 +19,6 @@ try:
             return f"{url}&gid={gid}" if gid is not None else url
         # An uploaded file: confirm=t skips the "can't scan for viruses" interstitial.
         return f"https://drive.google.com/uc?id={file_id}&export=download&confirm=t"
-
 
     def load_public_data(file_id, gid):
         response = requests.get(build_url(file_id, gid), timeout=30)
@@ -43,7 +41,7 @@ try:
     base_str = '!favorite&!traded&!shadow&!4*&!mythical&'
     shiny_base = 'shiny&'
 
-    # Shinies
+    # Needs for Shinies
     shinies = df.loc[df['SHINY'] == 'Y', ['ID']]
     shiny_str = ''
     shiny_list = shinies['ID'].to_list()
@@ -54,7 +52,7 @@ try:
     shiny_concat = base_str + shiny_base + shiny_str
     clean_shinies = shiny_concat[:-1]
 
-    # Lucky
+    # Needs for Lucky
     lucky = df.loc[df['LUCKY'] == 'Y', ['ID']]
     lucky_str = ''
     lucky_list = lucky['ID'].to_list()
@@ -65,7 +63,7 @@ try:
     lucky_concat = base_str + lucky_str
     clean_lucky = lucky_concat[:-1]
 
-    # Joe Needs for Shiny and Lucky
+    # Needs for Shiny and Lucky
     shlucky = df.loc[(df['SHINY'] == 'Y') & (df['LUCKY'] == 'Y'), ['ID']]
     shlucky_str = ''
     shlucky_list = shlucky['ID'].to_list()
@@ -75,17 +73,6 @@ try:
         shlucky_str += ','
     shlucky_concat = base_str + shiny_base + shlucky_str
     clean_shlucky = shlucky_concat[:-1]
-
-    # Jillian
-    shinies_j = df.loc[df['JILLIAN'] == 'Y', ['ID']]
-    shiny_str_j = ''
-    shiny_list_j = shinies_j['ID'].to_list()
-    for i_j in shiny_list_j: 
-        s_j = str(i_j)
-        shiny_str_j += s_j
-        shiny_str_j += ','
-    shiny_concat_j = base_str + shiny_base + shiny_str_j
-    clean_shinies_j = shiny_concat_j[:-1]
 
     # Print to Streamlit
     st.subheader('Tap/Hover over a section below and copy by clicking the squares')
