@@ -1,4 +1,3 @@
-import os
 import io
 from datetime import date
 import requests
@@ -103,18 +102,8 @@ with st.sidebar:
     #     ("Standard (5-15 days)", "Express (2-5 days)")
     # )
 
-    st.write('Download a copy of the Pokedex')
-    with open("base/pokemon.csv", "rb") as file:
-        st.download_button(
-            label="Download File",
-            data=file,
-            file_name="pokedex.csv",
-        )
-
     st.write('Lucky Pokemon Joe Needs')
     st.code(clean_lucky, language=None)
 
     st.write('Jillian Shiny Living Pokemon (Kanto)')
     st.code(clean_shinies_j, language=None)
-
-    
