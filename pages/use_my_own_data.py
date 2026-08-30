@@ -11,7 +11,6 @@ FILE_ID = st.text_input('Enter your Google Drive ID')
 GID = None  # Sheets only: pick a tab via the #gid= in its URL, or None for the first tab
 
 try:
-    @st.cache_data(ttl=600)
     def build_url(file_id, gid):
         if len(file_id) > 40:
             # A Sheet: uc?export=download returns an HTML page, not CSV.
@@ -20,6 +19,7 @@ try:
         # An uploaded file: confirm=t skips the "can't scan for viruses" interstitial.
         return f"https://drive.google.com/uc?id={file_id}&export=download&confirm=t"
 
+    @st.cache_data(ttl=600)
     def load_public_data(file_id, gid):
         response = requests.get(build_url(file_id, gid), timeout=30)
         response.raise_for_status()
@@ -86,4 +86,4 @@ try:
     st.write('Lucky Pokemon You Need')
     st.code(clean_lucky, language=None)
 except:
-    print('hello')
+    st.stop()

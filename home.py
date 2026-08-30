@@ -39,6 +39,7 @@ try:
     # st.dataframe(df)
 except Exception as e:
     st.error(f"Error loading data: {e}")
+    st.stop()
 
 base_str = '!favorite&!traded&!shadow&!4*&!mythical&'
 shiny_base = 'shiny&'
